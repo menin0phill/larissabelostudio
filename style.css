@@ -2,14 +2,14 @@
 
 :root {
   /* Color Palette */
-  --bg-gradient: linear-gradient(135deg, #FFF9FA 0%, #FFF0F3 40%, #FFE5EC 100%);
-  --bg-soft-pink: #FFF0F3;
+  --bg-gradient: linear-gradient(135deg, #FFF5F7 0%, #FFEBF0 40%, #FFD6E3 100%);
+  --bg-soft-pink: #FFEBF0;
   --bg-card: #FFFFFF;
   --accent-gold: #C5A880;
   --accent-gold-dark: #A6865A;
   --accent-gold-light: #E8DDCE;
-  --text-marsala: #9C2A53; /* Deep luxury rose-berry */
-  --text-marsala-light: #DF7394; /* Soft rose pink */
+  --text-marsala: #941B4A; /* Pure deep pink (no marsala/burgundy) */
+  --text-marsala-light: #E04E7D; /* Vibrant light pink */
   --text-dark: #2C2C2C;
   --text-muted: #666666;
   
@@ -19,10 +19,10 @@
   --font-body: 'Montserrat', sans-serif;
   
   /* Layout & Shadows */
-  --shadow-light: 0 8px 32px 0 rgba(156, 42, 83, 0.04);
-  --shadow-medium: 0 16px 40px 0 rgba(156, 42, 83, 0.08);
+  --shadow-light: 0 8px 32px 0 rgba(148, 27, 74, 0.04);
+  --shadow-medium: 0 16px 40px 0 rgba(148, 27, 74, 0.08);
   --shadow-gold: 0 8px 20px 0 rgba(197, 168, 128, 0.25);
-  --shadow-marsala: 0 8px 25px 0 rgba(156, 42, 83, 0.2);
+  --shadow-marsala: 0 8px 25px 0 rgba(148, 27, 74, 0.2);
   --border-glass: rgba(255, 255, 255, 0.4);
   --border-gold: 1px solid rgba(197, 168, 128, 0.3);
   
@@ -710,7 +710,7 @@ header.scrolled .nav-wrapper {
 
 .service-price {
   font-family: var(--font-title);
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   color: var(--text-marsala);
   font-weight: 700;
 }
@@ -1353,7 +1353,7 @@ textarea.form-control {
 }
 
 .btn-danger-outline:hover {
-  background: rgba(223, 115, 148, 0.05);
+  background: rgba(224, 78, 125, 0.05);
   transform: translateY(-2px);
 }
 
@@ -1436,7 +1436,7 @@ textarea.form-control {
 }
 
 .btn-action-delete {
-  background-color: rgba(223, 115, 148, 0.1);
+  background-color: rgba(224, 78, 125, 0.1);
   color: var(--text-marsala-light);
 }
 
