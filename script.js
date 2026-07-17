@@ -52,14 +52,14 @@ const DEFAULT_SERVICES = [
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- LocalStorage Initialization ---
-  if (!localStorage.getItem('esmalteria_services')) {
-    localStorage.setItem('esmalteria_services', JSON.stringify(DEFAULT_SERVICES));
+  if (!localStorage.getItem('larissa_belo_services')) {
+    localStorage.setItem('larissa_belo_services', JSON.stringify(DEFAULT_SERVICES));
   }
 
   // --- Render Services in landing page ---
   const servicesGrid = document.getElementById('servicesGrid');
   if (servicesGrid) {
-    const services = JSON.parse(localStorage.getItem('esmalteria_services'));
+    const services = JSON.parse(localStorage.getItem('larissa_belo_services'));
     servicesGrid.innerHTML = ''; // Clear fallback
 
     services.forEach((service, index) => {

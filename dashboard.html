@@ -169,15 +169,15 @@
 
       // Retrieve services from localStorage
       const getServices = () => {
-        if (!localStorage.getItem('esmalteria_services')) {
-          localStorage.setItem('esmalteria_services', JSON.stringify(DEFAULT_SERVICES));
+        if (!localStorage.getItem('larissa_belo_services')) {
+          localStorage.setItem('larissa_belo_services', JSON.stringify(DEFAULT_SERVICES));
         }
-        return JSON.parse(localStorage.getItem('esmalteria_services'));
+        return JSON.parse(localStorage.getItem('larissa_belo_services'));
       };
 
       // Save services to localStorage
       const saveServices = (services) => {
-        localStorage.setItem('esmalteria_services', JSON.stringify(services));
+        localStorage.setItem('larissa_belo_services', JSON.stringify(services));
       };
 
       // Reset Form State
@@ -302,7 +302,7 @@
       // Restore Defaults
       btnRestoreDefaults.addEventListener('click', () => {
         if (confirm('Deseja realmente restaurar os 7 serviços originais? Isso apagará as alterações personalizadas.')) {
-          localStorage.setItem('esmalteria_services', JSON.stringify(DEFAULT_SERVICES));
+          localStorage.setItem('larissa_belo_services', JSON.stringify(DEFAULT_SERVICES));
           renderServices();
           resetForm();
           showAlert('Serviços padrão restaurados com sucesso!');
