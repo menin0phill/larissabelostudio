@@ -2,14 +2,14 @@
 
 :root {
   /* Color Palette */
-  --bg-gradient: linear-gradient(135deg, #FDF6F6 0%, #FAF0F2 40%, #F5E6E8 100%);
-  --bg-soft-pink: #FDF6F6;
+  --bg-gradient: linear-gradient(135deg, #FFF9FA 0%, #FFF0F3 40%, #FFE5EC 100%);
+  --bg-soft-pink: #FFF0F3;
   --bg-card: #FFFFFF;
   --accent-gold: #C5A880;
   --accent-gold-dark: #A6865A;
   --accent-gold-light: #E8DDCE;
-  --text-marsala: #8A2542;
-  --text-marsala-light: #B83E65;
+  --text-marsala: #9C2A53; /* Deep luxury rose-berry */
+  --text-marsala-light: #DF7394; /* Soft rose pink */
   --text-dark: #2C2C2C;
   --text-muted: #666666;
   
@@ -19,10 +19,10 @@
   --font-body: 'Montserrat', sans-serif;
   
   /* Layout & Shadows */
-  --shadow-light: 0 8px 32px 0 rgba(138, 37, 66, 0.04);
-  --shadow-medium: 0 16px 40px 0 rgba(138, 37, 66, 0.08);
+  --shadow-light: 0 8px 32px 0 rgba(156, 42, 83, 0.04);
+  --shadow-medium: 0 16px 40px 0 rgba(156, 42, 83, 0.08);
   --shadow-gold: 0 8px 20px 0 rgba(197, 168, 128, 0.25);
-  --shadow-marsala: 0 8px 25px 0 rgba(138, 37, 66, 0.2);
+  --shadow-marsala: 0 8px 25px 0 rgba(156, 42, 83, 0.2);
   --border-glass: rgba(255, 255, 255, 0.4);
   --border-gold: 1px solid rgba(197, 168, 128, 0.3);
   
@@ -57,6 +57,10 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
 }
 
 /* Custom Scrollbar */
@@ -1344,12 +1348,12 @@ textarea.form-control {
 
 .btn-danger-outline {
   background: transparent;
-  color: #B83E65 !important;
-  border: 1px solid #B83E65;
+  color: var(--text-marsala-light) !important;
+  border: 1px solid var(--text-marsala-light);
 }
 
 .btn-danger-outline:hover {
-  background: rgba(184, 62, 101, 0.05);
+  background: rgba(223, 115, 148, 0.05);
   transform: translateY(-2px);
 }
 
@@ -1432,12 +1436,12 @@ textarea.form-control {
 }
 
 .btn-action-delete {
-  background-color: rgba(184, 62, 101, 0.1);
-  color: #B83E65;
+  background-color: rgba(223, 115, 148, 0.1);
+  color: var(--text-marsala-light);
 }
 
 .btn-action-delete:hover {
-  background-color: #B83E65;
+  background-color: var(--text-marsala-light);
   color: #FFFFFF;
   transform: scale(1.1);
 }

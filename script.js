@@ -51,15 +51,18 @@ const DEFAULT_SERVICES = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-  // --- LocalStorage Initialization ---
-  if (!localStorage.getItem('larissa_belo_services')) {
-    localStorage.setItem('larissa_belo_services', JSON.stringify(DEFAULT_SERVICES));
+  // --- LocalStorage Initialization & Cleanup ---
+  localStorage.removeItem('esmalteria_services');
+  localStorage.removeItem('larissa_belo_services');
+  
+  if (!localStorage.getItem('larissabelo_services_v4')) {
+    localStorage.setItem('larissabelo_services_v4', JSON.stringify(DEFAULT_SERVICES));
   }
 
   // --- Render Services in landing page ---
   const servicesGrid = document.getElementById('servicesGrid');
   if (servicesGrid) {
-    const services = JSON.parse(localStorage.getItem('larissa_belo_services'));
+    const services = JSON.parse(localStorage.getItem('larissabelo_services_v4'));
     servicesGrid.innerHTML = ''; // Clear fallback
 
     services.forEach((service, index) => {
