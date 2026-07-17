@@ -158,15 +158,16 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--text-marsala) 0%, var(--text-marsala-light) 100%);
+  background: linear-gradient(135deg, #E04E7D 0%, #FF8DAF 100%);
   color: #FFFFFF !important;
-  box-shadow: var(--shadow-marsala);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(224, 78, 125, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(138, 37, 66, 0.35);
+  background: linear-gradient(135deg, #C23A65 0%, #E04E7D 100%);
+  box-shadow: 0 12px 30px rgba(224, 78, 125, 0.4);
   color: #FFFFFF !important;
 }
 
