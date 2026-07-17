@@ -1,6 +1,6 @@
-# Esmalteria Janaína Barbosa - Landing Page Premium
+# Larissa Belo Studio - Landing Page Premium
 
-Uma landing page elegante, moderna, responsiva (Mobile-First) e de alta conversão projetada para a **Esmalteria Janaína Barbosa**, focada em serviços de saúde e estética das unhas e pés.
+Uma landing page elegante, moderna, responsiva (Mobile-First) e de alta conversão projetada para o **Larissa Belo Studio**, focada em serviços de saúde e estética das unhas e pés.
 
 ---
 
@@ -40,11 +40,11 @@ Como o projeto é construído em código estático puro, não há necessidade de
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/esmalteria-janaina-barbosa.git
+   git clone https://github.com/seu-usuario/larissa-belo-studio.git
    ```
 2. Entre no diretório do projeto:
    ```bash
-   cd esmalteria-janaina-barbosa
+   cd larissa-belo-studio
    ```
 3. Abra o arquivo `index.html` em qualquer navegador:
    - Dê dois cliques no arquivo ou abra pelo terminal:
@@ -62,7 +62,7 @@ Como o projeto é construído em código estático puro, não há necessidade de
 
 Este projeto está 100% pronto para ser hospedado gratuitamente no **GitHub Pages**:
 
-1. Crie um repositório no seu GitHub (ex: `esmalteria-janaina-barbosa`).
+1. Crie um repositório no seu GitHub (ex: `larissa-belo-studio`).
 2. Suba os arquivos do projeto para o repositório.
 3. No GitHub, vá em **Settings** > **Pages**.
 4. Em **Build and deployment**, selecione a branch `main` (ou `master`) e a pasta `/ (root)`.
@@ -72,4 +72,4 @@ Este projeto está 100% pronto para ser hospedado gratuitamente no **GitHub Page
 
 ## ⚖️ Licença
 
-Este projeto é de uso livre para estudos, portfólio ou aplicação profissional própria. Todos os direitos de design são reservados à Esmalteria Janaína Barbosa.
+Este projeto é de uso livre para estudos, portfólio ou aplicação profissional própria. Todos os direitos de design são reservados ao Larissa Belo Studio.
