@@ -12,6 +12,14 @@
   --text-marsala-light: #E04E7D; /* Vibrant light pink */
   --text-dark: #2C2C2C;
   --text-muted: #666666;
+
+  /* Button Gradient Variables */
+  --btn-grad-start: #E04E7D;
+  --btn-grad-end: #FF8DAF;
+  --btn-grad-hover-start: #C23A65;
+  --btn-grad-hover-end: #E04E7D;
+  --btn-shadow-color: rgba(224, 78, 125, 0.25);
+  --btn-shadow-hover-color: rgba(224, 78, 125, 0.4);
   
   /* Font Families */
   --font-cursive: 'Dancing Script', cursive;
@@ -35,6 +43,27 @@
   /* Transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Vibrant Pink Theme Overrides */
+body.theme-vibrant-pink {
+  --bg-gradient: linear-gradient(135deg, #FFE3EC 0%, #FFB3C6 50%, #FF85A2 100%);
+  --bg-soft-pink: #FFC2D1;
+  --text-marsala: #C71585; /* Vibrant Magenta/Deep Hot Pink */
+  --text-marsala-light: #FF4081; /* High-intensity pink */
+  
+  /* Button Gradient overrides */
+  --btn-grad-start: #FF4081;
+  --btn-grad-end: #FF85A2;
+  --btn-grad-hover-start: #A31548;
+  --btn-grad-hover-end: #FF4081;
+  --btn-shadow-color: rgba(255, 64, 129, 0.3);
+  --btn-shadow-hover-color: rgba(255, 64, 129, 0.45);
+  
+  /* Shadows overrides */
+  --shadow-light: 0 8px 32px 0 rgba(199, 21, 133, 0.06);
+  --shadow-medium: 0 16px 40px 0 rgba(199, 21, 133, 0.1);
+  --shadow-marsala: 0 8px 25px 0 rgba(255, 64, 129, 0.3);
 }
 
 /* Base Styles */
@@ -158,16 +187,16 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #E04E7D 0%, #FF8DAF 100%);
+  background: linear-gradient(135deg, var(--btn-grad-start) 0%, var(--btn-grad-end) 100%);
   color: #FFFFFF !important;
-  box-shadow: 0 8px 25px rgba(224, 78, 125, 0.25);
+  box-shadow: 0 8px 25px var(--btn-shadow-color);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
-  background: linear-gradient(135deg, #C23A65 0%, #E04E7D 100%);
-  box-shadow: 0 12px 30px rgba(224, 78, 125, 0.4);
+  background: linear-gradient(135deg, var(--btn-grad-hover-start) 0%, var(--btn-grad-hover-end) 100%);
+  box-shadow: 0 12px 30px var(--btn-shadow-hover-color);
   color: #FFFFFF !important;
 }
 
@@ -1468,4 +1497,56 @@ textarea.form-control {
   background-color: rgba(37, 211, 102, 0.1);
   color: #20BA5A;
   border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+/* Floating Theme Switcher widget */
+.theme-switcher {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  box-shadow: var(--shadow-medium);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-body);
+}
+
+.theme-switcher-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+}
+
+.theme-switcher-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  color: var(--text-dark);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: var(--bg-soft-pink);
+}
+
+.theme-btn.active {
+  background: var(--text-marsala-light);
+  color: #FFFFFF;
+  border-color: var(--text-marsala-light);
 }

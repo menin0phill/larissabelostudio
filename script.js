@@ -156,4 +156,32 @@ document.addEventListener('DOMContentLoaded', () => {
   reveals.forEach(reveal => {
     revealOnScroll.observe(reveal);
   });
+
+  // --- Theme Switcher ---
+  const themeClassicBtn = document.getElementById('themeClassicBtn');
+  const themeVibrantBtn = document.getElementById('themeVibrantBtn');
+
+  if (themeClassicBtn && themeVibrantBtn) {
+    // Read from localStorage (vibe choice)
+    const savedTheme = localStorage.getItem('larissabelo_theme');
+    if (savedTheme === 'vibrant') {
+      document.body.classList.add('theme-vibrant-pink');
+      themeClassicBtn.classList.remove('active');
+      themeVibrantBtn.classList.add('active');
+    }
+
+    themeClassicBtn.addEventListener('click', () => {
+      document.body.classList.remove('theme-vibrant-pink');
+      themeClassicBtn.classList.add('active');
+      themeVibrantBtn.classList.remove('active');
+      localStorage.setItem('larissabelo_theme', 'classic');
+    });
+
+    themeVibrantBtn.addEventListener('click', () => {
+      document.body.classList.add('theme-vibrant-pink');
+      themeClassicBtn.classList.remove('active');
+      themeVibrantBtn.classList.add('active');
+      localStorage.setItem('larissabelo_theme', 'vibrant');
+    });
+  }
 });
