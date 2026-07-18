@@ -395,10 +395,8 @@ header.scrolled .nav-wrapper {
   position: absolute;
   bottom: 30px;
   left: -30px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: var(--border-gold);
+  background: #FFEBF0; /* Solid soft pink background */
+  border: 2px solid var(--accent-gold); /* Gold border detail */
   padding: 16px 24px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-medium);
@@ -409,7 +407,7 @@ header.scrolled .nav-wrapper {
 }
 
 .hero-badge-icon {
-  background: var(--text-marsala);
+  background: var(--accent-gold); /* Gold badge icon container */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -428,12 +426,14 @@ header.scrolled .nav-wrapper {
 .hero-badge-text h4 {
   font-family: var(--font-title);
   color: var(--text-marsala);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .hero-badge-text p {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--accent-gold-dark); /* Gold detail subtitle */
+  font-weight: 600;
 }
 
 /* Sobre Mim */

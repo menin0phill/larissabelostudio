@@ -107,13 +107,18 @@
       <div class="logo" style="font-size: 1.8rem;">
         <span>Larissa Belo</span> Studio
       </div>
-      <a href="index.html" class="btn btn-secondary">
-        <!-- Back Icon SVG -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 16px; height: 16px; margin-right: 8px; fill: currentColor;">
-          <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.2L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-        </svg>
-        Voltar ao Site
-      </a>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <button id="btnLogout" class="btn btn-danger-outline" style="padding: 10px 16px; font-size: 0.85rem;">
+          Sair
+        </button>
+        <a href="index.html" class="btn btn-secondary">
+          <!-- Back Icon SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 16px; height: 16px; margin-right: 8px; fill: currentColor;">
+            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.2L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+          </svg>
+          Voltar ao Site
+        </a>
+      </div>
     </div>
 
     <!-- Alert Success Notification -->
@@ -257,6 +262,15 @@
           loginPassword.focus();
         }
       });
+
+      // --- Logout Handler ---
+      const btnLogout = document.getElementById('btnLogout');
+      if (btnLogout) {
+        btnLogout.addEventListener('click', () => {
+          sessionStorage.removeItem('larissabelo_auth');
+          window.location.reload();
+        });
+      }
 
       const serviceForm = document.getElementById('serviceForm');
       const serviceIdInput = document.getElementById('serviceId');
