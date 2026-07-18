@@ -191,7 +191,7 @@
         title: "Pedicure Sem Esmaltação",
         desc: "Cutilagem simples, remoção cuidadosa do excesso de cutículas e higienização profunda. Ideal para quem busca um aspecto limpo, saudável e extremamente natural.",
         price: "R$ 45,00",
-        image: "https://static.stealthelook.com.br/wp-content/uploads/2024/04/naked-nails-unhas-sem-esmalte.jpg"
+        image: "https://clmais.com.br/wp-content/uploads/2019/09/P%C3%A9s-Divulga%C3%A7%C3%A3o-1-1024x768.jpg"
       },
       {
         id: "pedicure-tradicional",
@@ -295,15 +295,15 @@
 
       // Retrieve services from localStorage
       const getServices = () => {
-        if (!localStorage.getItem('larissabelo_services_v5')) {
-          localStorage.setItem('larissabelo_services_v5', JSON.stringify(DEFAULT_SERVICES));
+        if (!localStorage.getItem('larissabelo_services_v6')) {
+          localStorage.setItem('larissabelo_services_v6', JSON.stringify(DEFAULT_SERVICES));
         }
-        return JSON.parse(localStorage.getItem('larissabelo_services_v5'));
+        return JSON.parse(localStorage.getItem('larissabelo_services_v6'));
       };
 
       // Save services to localStorage
       const saveServices = (services) => {
-        localStorage.setItem('larissabelo_services_v5', JSON.stringify(services));
+        localStorage.setItem('larissabelo_services_v6', JSON.stringify(services));
       };
 
       // Reset Form State
@@ -428,7 +428,7 @@
       // Restore Defaults
       btnRestoreDefaults.addEventListener('click', () => {
         if (confirm('Deseja realmente restaurar os 7 serviços originais? Isso apagará as alterações personalizadas.')) {
-          localStorage.setItem('larissabelo_services_v5', JSON.stringify(DEFAULT_SERVICES));
+          localStorage.setItem('larissabelo_services_v6', JSON.stringify(DEFAULT_SERVICES));
           renderServices();
           resetForm();
           showAlert('Serviços padrão restaurados com sucesso!');
